@@ -22,4 +22,7 @@ class Author extends Model
         $txt = 'ID:'.$this->id . ' ' . $this->name . '(' . $this->age .  '才'.') '.$this->nationality;
         return $txt;
     }
+    public function book(){
+        return $this->hasOne('App\Models\Book');
+    }
 }

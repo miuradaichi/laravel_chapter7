@@ -23,6 +23,10 @@
   <table>
     @csrf
     <tr>
+        <th>id</th>
+        <td><input type="text" name='id' value="{{$form->id}}"></td>
+    </tr>
+    <tr>
       <th>
         name
       </th>
