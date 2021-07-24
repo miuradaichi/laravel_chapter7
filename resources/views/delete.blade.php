@@ -38,7 +38,14 @@
         {{$form->age}}
       </td>
     </tr>
+    <tr>
+        <th>nationality</th>
+        <td><input type="text" name="nationality" value="{{$form->nationality}}"></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><button>送信</button></td>
+    </tr>
   </table>
-  <button>送信</button>
 </form>
 @endsection
