@@ -1,51 +1,44 @@
 @extends('layout.default')
 <style>
-    th{
-        background-color:289ADC;
-        color:white;
-        padding:5px 40px;
+  th {
+      background-color: black;
+      color: white;
+      padding: 5px 30px;
     }
-    tr:nth-chile(odd) td{
-        background-color:#FFFFFF;
+    td {
+      border: 1px solid black;
+      padding: 5px 30px;
+      text-align: center;
     }
-    td{
-        padding:25px 40px;
-        background-color:#EEEEEE;
-        text-align:center;
-    }
-    button{
-        padding:10px 20px;
-        background-color:#289ADC;
-        border:none;
-        color:white;
+    button {
+      padding: 10px 20px;
+      background: black;
+      color: white;
     }
 </style>
-@section('title','delete.balade.php')
+@section('title', 'delete.blade.php')
 
 @section('content')
-<form action="/delete" method="POST">
-<table>
+<form action="/delete" method="post">
+  <table>
     @csrf
     <tr>
-        <th>id</th>
-        <td><input type="text" name="id" value="{{$form->id}}"></td>
+      <th>
+        name
+      </th>
+      <td>
+        {{$form->name}}
+      </td>
     </tr>
     <tr>
-        <th>name</th>
-        <td><input type="text" name="name" value="{{$form->name}}"></td>
+      <th>
+        age
+      </th>
+      <td>
+        {{$form->age}}
+      </td>
     </tr>
-    <tr>
-        <th>age</th>
-        <td><input type="text" name="age" value="{{$form->age}}"></td>
-    </tr>
-    <tr>
-        <th>nationality</th>
-        <td><input type="text" name="nationality" value="{{$form->nationality}}"></td>
-    </tr>
-    <tr>
-        <th></th>
-        <td><button>送信</button></td>
-</tr>
-</table>
+  </table>
+  <button>送信</button>
 </form>
 @endsection
