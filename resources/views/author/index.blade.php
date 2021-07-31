@@ -8,17 +8,17 @@
     tr:nth-child(odd) td{
         background-color:#FFFFFF;
     }
-    td table {
-        margin: 0 auto;
+    td table{
+      margin:0 auto;
     }
     td{
         padding:25px 40px;
         background-color:#EEEEEE;
         text-align:center;
     }
-td table tbody tr td {
-    background-color:#EEEEEE !important;
-}
+    td table tbody tr td{
+      background-color:#EEEEEE !important;
+    }
 </style>
 @section('title','author.index.blade.php')
 
@@ -37,7 +37,7 @@ td table tbody tr td {
       <table>
         @foreach ($item->books as $obj)
         <tr>
-          <td>{{ $obj->getTitle() }}</td>
+          <td>{{$obj->getTitle()}}</td>
         </tr>
         @endforeach
       </table>
@@ -49,9 +49,9 @@ td table tbody tr td {
   <tr>
     <th>Author</th>
   </tr>
-  @foreach ($noItems as $item)
+  @foreach($noItems as $item)
   <tr>
-    <td>{{ $item->getDetail() }}</td>
+    <td>{{$item->getDetail()}} </td>
   </tr>
   @endforeach
 </table>
